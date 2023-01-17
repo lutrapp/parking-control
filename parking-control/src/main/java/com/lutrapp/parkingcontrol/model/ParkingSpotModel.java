@@ -26,25 +26,25 @@ public class ParkingSpotModel implements Serializable{
 	@Column(nullable=false, unique=true, length=7)
 	private String licencePlateCar;
 	
-	@Column(nullable=false, unique=true, length=70)
+	@Column(nullable=false, length=70)
 	private String brandCar;
 	
-	@Column(nullable=false, unique=true, length=70)
+	@Column(nullable=false, length=70)
 	private String modelCar;
 	
-	@Column(nullable=false, unique=true, length=70)
+	@Column(nullable=false, length=70)
 	private String colorCar;
 	
 	@Column(nullable=false)
 	private LocalDateTime registrationDate;
 	
-	@Column(nullable=false, unique=true, length=130)
-	private String responsiblename;
+	@Column(nullable=false, length=130)
+	private String responsibleName;
 	
-	@Column(nullable=false, unique=true, length=30)
+	@Column(nullable=false, length=30)
 	private String apartment;
 	
-	@Column(nullable=false, unique=true, length=30)
+	@Column(nullable=false, length=30)
 	private String block;
 
 	public UUID getId() {
@@ -103,12 +103,12 @@ public class ParkingSpotModel implements Serializable{
 		this.registrationDate = registrationDate;
 	}
 
-	public String getResponsiblename() {
-		return responsiblename;
+	public String getResponsibleName() {
+		return responsibleName;
 	}
 
-	public void setResponsiblename(String responsiblename) {
-		this.responsiblename = responsiblename;
+	public void setResponsiblename(String responsibleName) {
+		this.responsibleName = responsibleName;
 	}
 
 	public String getApartment() {
