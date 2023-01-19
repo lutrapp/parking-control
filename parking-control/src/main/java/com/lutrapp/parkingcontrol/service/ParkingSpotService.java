@@ -1,5 +1,9 @@
 package com.lutrapp.parkingcontrol.service;
 
+import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
+
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,5 +24,32 @@ public class ParkingSpotService {
 	@Transactional
 	public ParkingSpotModel save(ParkingSpotModel parkingSpotModel) {
 		return parkingSpotRepository.save(parkingSpotModel);
+	}
+
+	public boolean existsByLicencePlateCar(String licencePlateCar) {
+		return parkingSpotRepository.existsByLicencePlateCar(licencePlateCar);
+	}
+
+	public boolean existsByParkingSpotNumber(String parkingSpotNumber) {
+		return parkingSpotRepository.existsByParkingSpotNumber(parkingSpotNumber);
+	}
+
+	public boolean existsByApartmentAndBlock(String apartment, String block) {
+		return parkingSpotRepository.existsByApartmentAndBlock(apartment, block);
+	}
+
+	public List<ParkingSpotModel> findAll() {
+		return parkingSpotRepository.findAll();
+	}
+
+	public Optional<ParkingSpotModel> findById(UUID id) {
+		// TODO Auto-generated method stub
+		return parkingSpotRepository.findById(id);
+	}
+
+	@Transactional
+	public void delete(ParkingSpotModel parkingSpotModel) {
+		parkingSpotRepository.delete(parkingSpotModel);
+		
 	}
 }

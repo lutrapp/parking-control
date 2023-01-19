@@ -107,7 +107,7 @@ public class ParkingSpotModel implements Serializable{
 		return responsibleName;
 	}
 
-	public void setResponsiblename(String responsibleName) {
+	public void setResponsibleName(String responsibleName) {
 		this.responsibleName = responsibleName;
 	}
 

@@ -10,4 +10,7 @@ import com.lutrapp.parkingcontrol.model.ParkingSpotModel;
 @Repository
 public interface ParkingSpotRepository extends JpaRepository<ParkingSpotModel, UUID> {
 
+	boolean existsByLicencePlateCar(String licencePlateCar);
+	boolean existsByParkingSpotNumber(String parkingSpotNumber);
+	boolean existsByApartmentAndBlock(String apartment, String block);
 }
